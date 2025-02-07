@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:block_blast"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="450">
     <Grid>
+        <!-- Define the three sections -->
+        <Grid.RowDefinitions>
+            <!-- Header -->
+            <RowDefinition Height="0.1*"/>
+            
+            <!-- Main -->
+            <RowDefinition Height="0.6*"/>
 
+            <!-- Footer -->
+            <RowDefinition Height="0.3*"/>
+
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0"
+              x:Name="Header"
+              Background="LightBlue">
+            <TextBlock FontSize="50"  
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       FontStyle="Italic">
+                Block Blast!
+            </TextBlock>
+        </Grid>
+
+        <!-- Main -->
+        <Grid Grid.Row="1"
+              x:Name="MainArea"
+              Background="LightGray">
+
+        </Grid>
+
+        <!-- Footer -->
+        <Grid Grid.Row="2"
+              x:Name="Footer"
+              Background="LightBlue">
+            <Button Width="400"
+                    Height="80"
+                    VerticalAlignment="Bottom"
+                    Margin="0 10"
+                    FontSize="50"
+                    Click="startGame">
+                Start Game
+            </Button>
+        </Grid>
     </Grid>
 </Window>
