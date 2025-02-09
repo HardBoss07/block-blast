@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("block-blast")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eae710cd0fdf1a4347bcb5e14a370df0a4b48224")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+404136338e359535965174922b2eaa16399b8306")]
 [assembly: System.Reflection.AssemblyProductAttribute("block-blast")]
 [assembly: System.Reflection.AssemblyTitleAttribute("block-blast")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
