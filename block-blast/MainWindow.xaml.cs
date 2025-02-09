@@ -13,17 +13,10 @@ namespace block_blast
 
         private void startGame(object sender, RoutedEventArgs e) 
         {
-
-            TextBlock message = new TextBlock
-            {
-                Text = "Game Started!",
-                FontSize = 30,
-                Foreground = System.Windows.Media.Brushes.Black,
-                VerticalAlignment = VerticalAlignment.Center
-            };
+            Game game = new Game();
 
             MainArea.Children.Clear();
-            MainArea.Children.Add(message);
+            MainArea.Children.Add(game.GameGrid);
         }
     }
 }
