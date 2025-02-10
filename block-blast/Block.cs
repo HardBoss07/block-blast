@@ -1,9 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows.Media;
 
 public abstract class Block
 {
-    public int[,] Shape { get; protected set; };
+    public int[,] Shape { get; protected set; }
+    public Color color { get; protected set; }
 
     public int Size => Shape.GetLength(0);
 
@@ -24,22 +26,51 @@ public abstract class Block
         }
         Shape = rotated;
     }
+
+    public void SetColor()
+    {
+        Random random = new Random();
+
+        switch (random.Next(6))
+        {
+            case 0:
+                color = Colors.Blue;
+                break;
+            case 1:
+                color = Colors.Green;
+                break;
+            case 2:
+                color = Colors.Red;
+                break;
+            case 3:
+                color = Colors.Magenta;
+                break;
+            case 4:
+                color = Colors.Yellow;
+                break;
+            case 5:
+                color = Colors.Orange;
+                break;
+        }
+    }
 }
 
 // Blocks
 
 public class TBlock : Block
 {
-    public TBlock() 
-    { 
+    public TBlock()
+    {
         Shape = new int[,]
         {
             {0, 1, 0 },
             {0, 1, 0 },
             {0, 0, 0 }
-        }
+        };
+        SetColor();
     }
 }
+
 
 public class LBlock : Block
 {
@@ -50,9 +81,11 @@ public class LBlock : Block
             {0, 0, 1 },
             {1, 1, 1 },
             {0, 0, 0 }
-        }
+        };
+        SetColor();
     }
 }
+
 
 public class IBlock : Block
 {
@@ -61,6 +94,7 @@ public class IBlock : Block
         Shape = new int[,]
         {
             {1, 1, 1, 1,}
-        }
+        };
+        SetColor();
     }
 }
