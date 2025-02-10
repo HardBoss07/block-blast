@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Reflection;
 using System.Windows.Media;
 
 public abstract class Block
@@ -52,6 +53,13 @@ public abstract class Block
                 color = Colors.Orange;
                 break;
         }
+    }
+
+    public static int GetNumberOfBlockTypes()
+    {
+        return Assembly.GetExecutingAssembly()
+            .GetTypes()
+            .Count(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(Block)));
     }
 }
 
