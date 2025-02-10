@@ -17,6 +17,9 @@ namespace block_blast
 
             MainArea.Children.Clear();
             MainArea.Children.Add(game.GameGrid);
+
+            Footer.Children.Clear();
+            Footer.Children.Add(game.BlockGrid);
         }
     }
 }

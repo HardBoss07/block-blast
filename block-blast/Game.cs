@@ -8,11 +8,19 @@ public class Game
     private const double TILE_SIZE = 50;
 
     public Grid GameGrid { get; private set; }
+    public Grid BlockGrid { get; private set; }
+
+    private Block[] blocks = new Block[3];
 
     public Game()
     {
-        GameGrid = new Grid 
-        { 
+       initGame();
+    }
+
+    private void initGame()
+    {
+        GameGrid = new Grid
+        {
             HorizontalAlignment = HorizontalAlignment.Center,
             VerticalAlignment = VerticalAlignment.Center
         };
@@ -48,6 +56,61 @@ public class Game
 
                 GameGrid.Children.Add(tile);
             }
+        }
+
+        BlockGrid = new Grid
+        {
+            HorizontalAlignment = HorizontalAlignment.Center,
+            VerticalAlignment = VerticalAlignment.Center
+        };
+
+        for (int i = 0; i < 3; i++)
+        {
+            BlockGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.3) });
+        }
+
+        setBlocks();
+    }
+
+    private void setBlocks()
+    {
+        blocks = new Block[3];
+        Random random = new Random();
+        for (int i = 0; i < 3; i++)
+        {
+            blocks[i] = Block.getRandomBlock();
+            blocks[i].setColor();
+
+            for (int j = 0; j < random.Next(); j++)
+            {
+                blocks[i].rotate();
+            }
+        }
+    }
+
+    public void update()
+    {
+        updateGameGrid();
+        updateBlockGrid();
+    }
+
+    private void updateGameGrid()
+    {
+    }
+
+    private void updateBlockGrid()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            TextBlock textBlock = new TextBlock
+            {
+                Text = i.ToString(),
+                Foreground = new SolidColorBrush(Colors.White),
+                FontSize = 5,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            BlockGrid.Children.Add(textBlock);
         }
     }
 }

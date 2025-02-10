@@ -15,7 +15,7 @@ public abstract class Block
         Shape = new int[4, 4];
     }
 
-    public void Rotate()
+    public void rotate()
     {
         int[,] rotated = new int[Size, Size];
         for (int row = 0; row < Size; row++)
@@ -28,7 +28,7 @@ public abstract class Block
         Shape = rotated;
     }
 
-    public void SetColor()
+    public void setColor()
     {
         Random random = new Random();
 
@@ -55,12 +55,51 @@ public abstract class Block
         }
     }
 
-    public static int GetNumberOfBlockTypes()
+    public static int getNumberOfBlockTypes()
     {
         return Assembly.GetExecutingAssembly()
             .GetTypes()
             .Count(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(Block)));
     }
+
+    public static Block getRandomBlock()
+    {
+        Block block = null;
+        Random random = new Random();
+        switch (random.Next(getNumberOfBlockTypes()))
+        {
+            case 0:
+                block = new TBlock();
+                break;
+            case 1:
+                block = new LBlock();
+                break;
+            case 2:
+                block = new IBlock();
+                break;
+        }
+
+        return block;
+    }
+
+    public override string ToString()
+    {
+        string blockType = GetType().Name;
+        string colorName = color.ToString();
+        string shapeRepresentation = "";
+
+        for (int row = 0; row < Size; row++)
+        {
+            for (int col = 0; col < Size; col++)
+            {
+                shapeRepresentation += Shape[row, col] == 1 ? "■ " : "  ";
+            }
+            shapeRepresentation += "\n";
+        }
+
+        return $"Block Type: {blockType}\nColor: {colorName}\nShape:\n{shapeRepresentation}";
+    }
+
 }
 
 // Blocks
@@ -72,10 +111,10 @@ public class TBlock : Block
         Shape = new int[,]
         {
             {0, 1, 0 },
-            {0, 1, 0 },
+            {1, 1, 1 },
             {0, 0, 0 }
         };
-        SetColor();
+        setColor();
     }
 }
 
@@ -90,7 +129,7 @@ public class LBlock : Block
             {1, 1, 1 },
             {0, 0, 0 }
         };
-        SetColor();
+        setColor();
     }
 }
 
@@ -103,6 +142,6 @@ public class IBlock : Block
         {
             {1, 1, 1, 1,}
         };
-        SetColor();
+        setColor();
     }
 }

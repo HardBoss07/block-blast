@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|solutionrelative:block-blast\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|d:\\code projects\\block-blast\\block-blast\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|solutionrelative:block-blast\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|d:\\code projects\\block-blast\\block-blast\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|solutionrelative:block-blast\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|d:\\code projects\\block-blast\\block-blast\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|solutionrelative:block-blast\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06FC2CFF-B7F7-45D9-B35E-E39DB600E3FF}|block-blast\\block-blast.csproj|d:\\code projects\\block-blast\\block-blast\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -30,13 +30,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Block.cs",
               "DocumentMoniker": "D:\\Code Projects\\block-blast\\block-blast\\Block.cs",
               "RelativeDocumentMoniker": "block-blast\\Block.cs",
               "ToolTip": "D:\\Code Projects\\block-blast\\block-blast\\Block.cs",
               "RelativeToolTip": "block-blast\\Block.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAYwEQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwFQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T09:34:46.517Z",
               "EditorCaption": ""
@@ -49,22 +49,23 @@
               "RelativeDocumentMoniker": "block-blast\\Game.cs",
               "ToolTip": "D:\\Code Projects\\block-blast\\block-blast\\Game.cs",
               "RelativeToolTip": "block-blast\\Game.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwGwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-09T12:54:04.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Code Projects\\block-blast\\block-blast\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "block-blast\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Code Projects\\block-blast\\block-blast\\MainWindow.xaml.cs",
               "RelativeToolTip": "block-blast\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T09:17:04.703Z"
+              "WhenOpened": "2025-02-07T09:17:04.703Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -75,7 +76,8 @@
               "ToolTip": "D:\\Code Projects\\block-blast\\block-blast\\MainWindow.xaml",
               "RelativeToolTip": "block-blast\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-07T09:17:05.738Z"
+              "WhenOpened": "2025-02-07T09:17:05.738Z",
+              "EditorCaption": ""
             }
           ]
         }
