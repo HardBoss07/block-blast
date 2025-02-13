@@ -60,13 +60,13 @@ public class Game
 
         BlockGrid = new Grid
         {
-            HorizontalAlignment = HorizontalAlignment.Center,
+            HorizontalAlignment = HorizontalAlignment.Stretch,
             VerticalAlignment = VerticalAlignment.Center
         };
 
         for (int i = 0; i < 3; i++)
         {
-            BlockGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.3) });
+            BlockGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(0.1, GridUnitType.Star) });
         }
 
         setBlocks();
@@ -76,15 +76,18 @@ public class Game
     {
         blocks = new Block[3];
         Random random = new Random();
+
         for (int i = 0; i < 3; i++)
         {
             blocks[i] = Block.getRandomBlock();
             blocks[i].setColor();
 
-            for (int j = 0; j < random.Next(); j++)
+            int rotations = random.Next(4);
+            for (int j = 0; j < rotations; j++)
             {
                 blocks[i].rotate();
             }
+
         }
     }
 
@@ -100,17 +103,15 @@ public class Game
 
     private void updateBlockGrid()
     {
+        BlockGrid.Children.Clear();
+
         for (int i = 0; i < 3; i++)
         {
-            TextBlock textBlock = new TextBlock
-            {
-                Text = i.ToString(),
-                Foreground = new SolidColorBrush(Colors.White),
-                FontSize = 5,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center
-            };
-            BlockGrid.Children.Add(textBlock);
+            Grid blockVisual = blocks[i].generateGrid();
+            blockVisual.HorizontalAlignment = HorizontalAlignment.Center;
+            blockVisual.VerticalAlignment = VerticalAlignment.Center;
+            Grid.SetColumn(blockVisual, i);
+            BlockGrid.Children.Add(blockVisual);
         }
     }
 }

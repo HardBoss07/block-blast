@@ -6,20 +6,29 @@ namespace block_blast
 
     public partial class MainWindow : Window 
     {
+
+        private Game game;
         public MainWindow() 
         {
             InitializeComponent();
+
+            game = new Game();
+
+            MainArea.Children.Add(game.GameGrid);
         }
 
         private void startGame(object sender, RoutedEventArgs e) 
         {
-            Game game = new Game();
+            game.update();
 
-            MainArea.Children.Clear();
-            MainArea.Children.Add(game.GameGrid);
+            if (game.BlockGrid != null)
+            {
+                Footer.Children.Clear();
+                Footer.Children.Add(game.BlockGrid);
 
-            Footer.Children.Clear();
-            Footer.Children.Add(game.BlockGrid);
+                game.BlockGrid.HorizontalAlignment = HorizontalAlignment.Center;
+                game.BlockGrid.VerticalAlignment = VerticalAlignment.Center;
+            }
         }
     }
 }
