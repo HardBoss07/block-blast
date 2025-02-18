@@ -131,8 +131,8 @@ public abstract class Block
                         BorderBrush = new SolidColorBrush(Colors.Black),
                         BorderThickness = new Thickness(1),
                         CornerRadius = new CornerRadius(2),
-                        Width = 30,
-                        Height = 30
+                        Width = 50,
+                        Height = 50
                     };
 
                     Grid.SetRow(border, row);

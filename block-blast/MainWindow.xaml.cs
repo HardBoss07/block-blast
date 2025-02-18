@@ -3,12 +3,11 @@ using System.Windows.Controls;
 
 namespace block_blast
 {
-
-    public partial class MainWindow : Window 
+    public partial class MainWindow : Window
     {
-
         private Game game;
-        public MainWindow() 
+
+        public MainWindow()
         {
             InitializeComponent();
 
@@ -17,7 +16,7 @@ namespace block_blast
             MainArea.Children.Add(game.GameGrid);
         }
 
-        private void startGame(object sender, RoutedEventArgs e) 
+        private void startGame(object sender, RoutedEventArgs e)
         {
             game.update();
 

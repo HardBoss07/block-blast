@@ -11,13 +11,12 @@
         <Grid.RowDefinitions>
             <!-- Header -->
             <RowDefinition Height="0.1*"/>
-            
+
             <!-- Main -->
             <RowDefinition Height="0.6*"/>
 
             <!-- Footer -->
             <RowDefinition Height="0.3*"/>
-
         </Grid.RowDefinitions>
 
         <!-- Header -->
@@ -36,7 +35,7 @@
         <Grid Grid.Row="1"
               x:Name="MainArea"
               Background="LightGray">
-
+            <!-- MainArea is where the game grid (GameGrid) is placed -->
         </Grid>
 
         <!-- Footer -->
