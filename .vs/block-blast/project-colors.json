@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "06fc2cff-b7f7-45d9-b35e-e39db600e3ff": {
+      "ProjectGuid": "06fc2cff-b7f7-45d9-b35e-e39db600e3ff",
+      "DisplayName": "block-blast",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
