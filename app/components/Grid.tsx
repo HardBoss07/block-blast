@@ -1,8 +1,9 @@
 "use client";
 
-import {CELL_SIZE, GRID_SIZE, BASE_BG_BORDER_COLOR} from "@/types/consts";
+import {BASE_BG_BORDER_COLOR, CELL_SIZE, GRID_SIZE} from "@/types/consts";
 import {Grid as G, GridCell} from "@/types/Grid";
-import {initGridCells} from "@/util/Game";
+import {initGridCells, placeBlockOnGrid} from "@/util/Game";
+import {SBlock, SquareBlockSmall, TBlock} from "@/types/Blocks";
 
 type Props = {
     grid?: G;
@@ -10,8 +11,12 @@ type Props = {
 
 export default function Grid({grid}: Props) {
     // if no grid is provided, build a default one
-    const displayGrid: G =
+    let displayGrid: G =
         grid ?? initGridCells({width: GRID_SIZE, height: GRID_SIZE, size: CELL_SIZE});
+
+    displayGrid = placeBlockOnGrid(displayGrid, TBlock, 2, 2);
+    displayGrid = placeBlockOnGrid(displayGrid, SBlock, 4, 4);
+    displayGrid = placeBlockOnGrid(displayGrid, SquareBlockSmall, 0, 0);
 
     return (
         <div
@@ -22,6 +27,7 @@ export default function Grid({grid}: Props) {
                 gridTemplateRows: `repeat(${displayGrid.height}, ${displayGrid.size}px)`,
                 gap: "2px",
                 backgroundColor: "#444",
+                position: "relative",
             }}
         >
             {displayGrid.cells?.flat().map((cell: GridCell) => (
